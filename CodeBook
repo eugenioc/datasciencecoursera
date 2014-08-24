@@ -1,3 +1,6 @@
+CODEBOOK
+--------------------------------------------------------------------------------------------------------------------
+
 #The name of the resulting tidy dataset after runnign the r script in the read me file is result.txt.
 #To run the script thta produce the data the only thing you need to do is modify the path to the UCI HAR Dataset folder on
 your computer
