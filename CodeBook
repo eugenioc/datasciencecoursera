@@ -1,30 +1,39 @@
-GitHub Flavored Markdown
-================================
+#The name of the resulting tidy dataset after runnign the r script in the read me file is result.txt.
+#To run the script thta produce the data the only thing you need to do is modify the path to the UCI HAR Dataset folder on
+your computer
+#after running the script the file will be in the UCI HAR Dataset folder on your computer
 
-*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
+----------------------------------------------------
+#the variable in the dataset are the following:
+1. Activity
+*possible values are : WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING,LAYING,NOT CLASSIFIED
+2. Var_type: type of the feature, possible values are all the feature containing "mean" and "std" in the original data
+3. MeanValue: Average of the corresponding feature by activity 
 
-Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
+----------------------------------------------------
 
-Roses are red
-Violets are blue
+The step in the script processing the data are the following:
 
-The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
+step 1 read X_train data
+step 1 read features data
+step 1 assign column names of the feature to the x_train dataset
+step 1 read y_train data
+step 1 assign column names of the feature to the y_train dataset
+step 1 read subject train data
+step 1 assign column names f_subject to the subject data
+step 1 merge the train data
+step 2
+ execute the same steps on the test data
+step 3 merge the train and test data
+step 4 assign meaningful activity names using the mapping from the file activity_labels
+step 5 calculating allowed column (only column containing "mean" and "std" in the name)
+step 6 filtering the data only for the allowed column 
+step 7 load reshape2 and plyr package
+step 8 melt the data to make it tydy in long format
+step 9  grouping the data aggregating on activity and type of feature
+step 10 assign final column names 
+step 11 write the tidy dataset to the folder UCI HAR Dataset with name result.txt
 
-Roses are red  
-Violets are blue
+All this steps are commented in the script
 
-Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
 
-A bit of the GitHub spice
--------------------------
-
-In addition to the changes in the previous section, certain references are auto-linked:
-
-* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* \#Num: #1
-* User/#Num: mojombo#1
-* User/Project#Num: mojombo/god#1
-
-These are dangerous goodies though, and we need to make sure email addresses don't get mangled:
