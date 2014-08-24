@@ -56,8 +56,7 @@ final_merge <- rbind(merge_train,merge_test)
 
 final_merge$f_activity <- ifelse(
 
-	final_merge$f_activity == 1, "WALKING
-",
+	final_merge$f_activity == 1, "WALKING",
 	ifelse(final_merge$f_activity == 2,"WALKING_UPSTAIRS",
         ifelse(final_merge$f_activity == 3,"WALKING_DOWNSTAIRS",
 	ifelse(final_merge$f_activity == 4,"SITTING",
