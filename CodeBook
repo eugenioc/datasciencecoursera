@@ -1,1 +1,7 @@
- 
+ #The name of the resulting tidy dataset after runnign the r script in the read me file is result.txt.
+ #To run the script thta produce the data the only thing you need to do is modify the path to the UCI HAR Dataset folder on
+ your computer
+ #after running the script the file will be in the UCI HAR Dataset folder on your computer
+ #the variable in the dataset are the following:
+ 1. Activity
+ ⋅⋅*possible values are : WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING,LAYING,NOT CLASSIFIED
