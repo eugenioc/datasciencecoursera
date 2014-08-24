@@ -2,14 +2,15 @@ CODEBOOK
 --------------------------------------------------------------------------------------------------------------------
 
 #The name of the resulting tidy dataset after runnign the r script in the read me file is result.txt.
-#To run the script thta produce the data the only thing you need to do is modify the path to the UCI HAR Dataset folder on
+#To run the script that produce the data you need to modify the path to the UCI HAR Dataset folder on
 your computer
-#after running the script the file will be in the UCI HAR Dataset folder on your computer
+#you need to have installed in r the reshape2 and plyr package
+#after running the script the final file will be in the UCI HAR Dataset folder on your computer (name : result.txt)
 
 ----------------------------------------------------
 #the variable in the dataset are the following:
 1. Activity
-*possible values are : WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING,LAYING,NOT CLASSIFIED
+*possible values are : WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING,LAYING,NOT CLASSIFIED(when not present a value)
 2. Var_type: type of the feature, possible values are all the feature containing "mean" and "std" in the original data
 3. MeanValue: Average of the corresponding feature by activity 
 
@@ -32,7 +33,7 @@ step 4 assign meaningful activity names using the mapping from the file activity
 step 5 calculating allowed column (only column containing "mean" and "std" in the name)
 step 6 filtering the data only for the allowed column 
 step 7 load reshape2 and plyr package
-step 8 melt the data to make it tydy in long format
+step 8 melt the data to make it tidy in long format
 step 9  grouping the data aggregating on activity and type of feature
 step 10 assign final column names 
 step 11 write the tidy dataset to the folder UCI HAR Dataset with name result.txt
