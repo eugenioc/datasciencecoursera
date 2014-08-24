@@ -1,3 +1,4 @@
+```r
 path <- "C:\\Users\\eugenio\\Desktop\\r working\\UCI HAR Dataset"
 tr_x_data <- as.data.frame(read.table(paste(path,"\\train\\X_train.txt",sep=""),header=TRUE,fill=TRUE))
 tr_names_x_data <- as.data.frame(read.table(paste(path,"\\features.txt",sep=""),header=TRUE,fill=TRUE))
@@ -38,3 +39,4 @@ fdata  <- ddply(fdata , .(f_activity, variable), function(fdata ) mean(fdata$val
 colnames(fdata) <- c("Activity", "Var_type", "MeanValue")
 write.table(fdata,file=paste(path,"\\result.txt",sep="" ),row.name=FALSE)
 print("end of script")
+```
