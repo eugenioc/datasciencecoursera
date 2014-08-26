@@ -60,7 +60,7 @@ final_merge$f_activity <- ifelse(
         ifelse(final_merge$f_activity == 3,"WALKING_DOWNSTAIRS",
     ifelse(final_merge$f_activity == 4,"SITTING",
     ifelse(final_merge$f_activity == 5,"STANDING",
-    ifelse(final_merge$f_activity == 5,"LAYING", "NOT CLASSIFIED"
+    ifelse(final_merge$f_activity == 6,"LAYING", "NOT CLASSIFIED"
 )
 )
 )
